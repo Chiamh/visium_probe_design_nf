@@ -43,7 +43,7 @@ It uses Docker containers (also compatible with Singularity) for ease of install
 	
 ## Input requirements
 1. Path to a text file e.g. microbes to design.txt, with each line being a microbial species of interest, with the genus and species names separated by an underscore.
-<img src='/docs/input_example.png' width='100'>
+<img src='/docs/input_example.png' width='300'>
 
 ## Output files
 
