@@ -43,7 +43,7 @@ It uses Docker containers (also compatible with Singularity) for ease of install
 	
 ## Input requirements
 1. Path to a text file e.g. microbes to design.txt, with each line being a microbial species of interest, with the genus and species names separated by an underscore.
-<img src='/docs/input_example.PNG' width='100'>
+<img src='/docs/input_example.png' width='100'>
 
 ## Output files
 
@@ -68,7 +68,7 @@ Design parameters were in part, derived from 10X Genomics's Technical Note "Cust
 4. Matches to off-target genes have at least have five mismatches in at least one of the LHS or RHS probes to prevent efficient hybridization. 
 5. An off-target with more than 75% (> 20 bp match) total complementarity to a probe is a risk for cross-hybridization, but this can be tolerated if the other partner (LHS or RHS) does not cross-hybridize to the same off-target.
 6. Probe pairs do not overlap to avoid competition for the same binding sites.
-7. Tm range is 48 – 77 degrees Celsius. Melting temperatures were calculated based on Visium hyb conditions which are 0% formamide and 165 mM Na+ (1X SSC buffer).
+7. Tm range is 48 - 77 degrees Celsius. Melting temperatures were calculated based on Visium hyb conditions which are 0% formamide and 165 mM Na+ (1X SSC buffer).
 8. Self-hairpin Tm and self-dimer Tm are <= 45 degrees Celsius, which is >= 5 degrees below the hybridization temp of 50 degrees Celsius.
 9. The difference between the Tm of hybridization to target and the Tm of oligo self-hairpins (secondary structure) is > 10 degrees Celsius to avoid self inhibition
 10. Shortlisted species probes are based on the top 7 probe pairs which had the lowest number of off-target species by BLAST.
