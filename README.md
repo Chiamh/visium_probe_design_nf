@@ -10,7 +10,7 @@ It uses Docker containers (also compatible with Singularity) for ease of install
 ## Pipeline summary
 1. Target sequences e.g. ribosomal RNA sequences are downloaded from [NCBI](https://ftp.ncbi.nlm.nih.gov/genomes/refseq/) and extracted.
 2. Regions from target molecules are selected using [oligominer](https://github.com/beliveau-lab/OligoMiner). These tile all eligible sequences for each target molecule.
-3. Tiling oligonucleotide sequences (probes) are blasted against a database. By default, this database includes the human transcriptome, tRNAs, SSU and LSU rRNA sequences from [Silva 138.1](https://www.arb-silva.de/) 
+3. Tiling oligonucleotide sequences (probes) are blasted against a database. By default, this database includes the human transcriptome, tRNAs, SSU and LSU rRNA sequences from [Silva 138.2](https://www.arb-silva.de/) 
 4. Candidate probes are initially filtered to maximize species or genus specificity, and then for desired thermodynamic properties (see section on probe design parameters).
 5. Non-overlapping Species- and Genus- level probes are shortlisted and the actual sequences are appended with Visium adapter sequences.
 
