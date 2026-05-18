@@ -22,23 +22,23 @@ It uses Docker containers (also compatible with Singularity) for ease of install
 
 3. Clone the pipeline and refer to the help message
 	```sh
-	$ git clone https://github.com/Chiamh/visium_probe_design-nf
+	$ git clone https://github.com/Chiamh/visium_probe_design_nf
 	
-	$ nextflow run ./visium_probe_design-nf/main.nf --help
+	$ nextflow run ./visium_probe_design_nf/main.nf --help
 	```
 * Add a custom config file which contains the paths to various pre-installed databases. Refer to the test.config file in this repo for an example. 
 * Add a custom profile in the nextflow.config file, allowing you to specify the use of docker or singularity, and/or a task scheduler.  
 
-4. Make sure all helper scripts in visium_probe_design-nf/bin have execute permissions
+4. Make sure all helper scripts in visium_probe_design_nf/bin have execute permissions
 
 	```sh
-	$ chmod +x ./visium_probe_design-nf/bin/*
+	$ chmod +x ./visium_probe_design_nf/bin/*
 	```
 
 5. Run the full workflow
 * Add the -bucket-dir argument if running on AWSbatch with S3 support
 	```sh
-	$ nextflow run ./visium_probe_design-nf/main.nf -profile docker,your_profile --taxa_list microbes_to_design.txt --outdir /path/to/results
+	$ nextflow run ./visium_probe_design_nf/main.nf -profile docker,your_profile --taxa_list microbes_to_design.txt --outdir /path/to/results
 	```
 	
 ## Input requirements
