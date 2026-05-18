@@ -24,7 +24,7 @@ It uses Docker containers (also compatible with Singularity) for ease of install
 	```sh
 	$ git clone https://github.com/Chiamh/visium_probe_design-nf
 	
-	$ nextflow run ./meta-omics-nf/main.nf --help
+	$ nextflow run ./visium_probe_design-nf/main.nf --help
 	```
 * Add a custom config file which contains the paths to various pre-installed databases. Refer to the test.config file in this repo for an example. 
 * Add a custom profile in the nextflow.config file, allowing you to specify the use of docker or singularity, and/or a task scheduler.  
