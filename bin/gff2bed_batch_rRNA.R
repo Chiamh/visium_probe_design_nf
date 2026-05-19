@@ -145,6 +145,9 @@ if (!opt$quiet) message("\nProcessing species...")
 success_count <- 0
 error_count <- 0
 
+#Replace problematic characters in species names with "_"
+input_species$species <- gsub("[^a-zA-Z0-9_.-]", "_", input_species$species)
+
 for (i in input_species$species) {
   if (!opt$quiet) message(sprintf("Processing: %s", i))
   
