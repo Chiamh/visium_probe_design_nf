@@ -1,5 +1,5 @@
 process PROBE_FILTERING_REFINED {
-	label "process_small"
+	label "process_medium"
 	tag "${species}"
 	publishDir "${params.outdir}/probe_filtering_out", mode: 'copy'
 	

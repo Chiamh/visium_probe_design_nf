@@ -5,11 +5,14 @@
 set -euo pipefail
 
 line=$1
-read -r URL SPECIES <<< "$(
+read -r URL SPECIES_UNFMT <<< "$(
 	awk -F'\t' '{print $13, $7}' <<< "$line"
 )"
 
 ID=$(basename "$URL")
+
+#This replaces any char in the species name that isn't alphanumeric, underscore, dot, or hyphen with _
+SPECIES="${SPECIES_UNFMT//[^a-zA-Z0-9_.-]/_}"
 
 #Create log file in working directory if it does not already exist.
 [ -f "$SPECIES"_download.log ] || touch "$SPECIES"_download.log
