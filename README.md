@@ -35,7 +35,11 @@ It uses Docker containers (also compatible with Singularity) for ease of install
 	$ chmod +x ./visium_probe_design_nf/bin/*
 	```
 
-5. Run the full workflow
+5. Download the two required [`database files`](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/X2U1YA) and update your .config file with the paths.
+* The first file is a blastN database of the human transcriptome, human tRNA and microbial rRNAs (LSU and SSU) from Silva (138.2)
+* The second file is a text file bacteria_and_fungi_assembly_summary_ref_genome_fmt, which is metadata for downloading reference genomes from NCBI. 
+
+6. Run the full workflow
 * Add the -bucket-dir argument if running on AWSbatch with S3 support
 	```sh
 	$ nextflow run ./visium_probe_design_nf/main.nf -profile docker,your_profile --taxa_list microbes_to_design.txt --outdir /path/to/results
